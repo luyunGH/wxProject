@@ -1,0 +1,37 @@
+page{
+    background-color: #f4f4f4;
+  }
+.container1{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    color:#000;
+    height:100%;
+    padding: 100rpx 50rpx;
+}
+.imgStyle{
+    width: 180rpx;
+    height: 180rpx;
+}
+.item{
+    height:350rpx;
+    font-family: "宋体";
+    background: #d9d9d9;
+    width: 46%;
+    text-align: center;
+    padding-top:40rpx;
+    border-radius: 20rpx;
+}
+.left{
+    margin-right:8%;
+    background:#fff;
+}
+.leftText{
+    font-size:70rpx;
+    color:#000;
+    font-weight:700;
+}
+.leftBottomText{
+    margin-top:30rpx;
+}

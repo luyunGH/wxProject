@@ -1,0 +1,26 @@
+<view class="container1">
+    <view class="item left">
+        <image class="imgStyle" src="{{src}}"></image>
+        <view>
+            <text class="leftText">IB</text>
+        </view>
+        <view class="leftBottomText"> 
+            <text>mathematics</text>
+        </view>
+    </view>
+    <view class="item">
+        <image class="imgStyle" src="{{src1}}"></image>
+        <view class="leftBottomText"> 
+            <text>mathematics</text>
+        </view>
+        <view style="margin-top:30rpx;"> 
+            <text>----</text>
+            <text style="margin:0 15rpx;">已购买</text>
+            <text>----</text>
+        </view>
+    </view>
+    
+</view>
+<view>
+    {{imgr}}
+</view>

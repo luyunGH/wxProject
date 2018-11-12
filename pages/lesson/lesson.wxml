@@ -1,0 +1,7 @@
+<view class="container2">
+    <view class="item" wx:for="{{items}}" wx:for-item="item">
+        <text class="itemText1">{{item.name}}</text>
+        <text>{{item.describe}}</text>
+    </view>
+    <!-- <button type="primary">弹框</button> -->
+</view>

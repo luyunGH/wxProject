@@ -1,0 +1,10 @@
+<template name="ProductPrice">
+   <view class='ProductItem'>
+    <navigator url="{{link}}" hover-class="navigator-hover">  
+      <view>
+       <image src='{{img}}'></image>
+      </view>
+      <text>{{ProductRemark}}</text>
+    </navigator>
+   </view>
+</template>

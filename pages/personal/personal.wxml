@@ -1,0 +1,19 @@
+<!-- 九宫格布局 -->
+<view class="headerCon">
+    <view class="item">lalal</view>
+    <view class="item2">头像</view> 
+</view>
+<view class="container1">
+    <view class="weui-grids">
+        <view class="weui-grid" wx:for="{{routers}}" wx:key="name">
+            <navigator url="{{item.url}}">
+                <view class='weui-grid__bg'>
+                    <view class="weui-grid__icon">
+                        <image src="{{item.icon}}" mode="scaleToFill" />
+                    </view>
+                    <text class="weui-grid__label">{{item.name}}</text>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,36 @@
+<!--Memu/MemuPage.wxml-->
+<import src="../Mould/Test.wxml"/>
+<view class='header'>
+  <image src="{{headerImg}}" mode='scaleToFill'></image>
+</view>
+<view>
+</view> 
+<view>
+  <swiper indicator-dots="{{indicatorDots}}"  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">  
+         <block wx:for="{{imgUrls}}">  
+           <swiper-item>  
+              <navigator url="{{item.link}}" hover-class="navigator-hover">  
+               <image src="{{item.url}}" class="slide-image" width="355" height="150"/>  
+              </navigator>  
+           </swiper-item>   
+         </block>  
+ </swiper>  
+</view>
+<!-- <view class='ProductList'>
+  <block wx:for-items="{{productMsg}}">
+    <template is="ProductPrice" data="{{...item}}"></template>
+  </block>
+</view> -->
+
+<view class="schoollist">
+  <block wx:for="{{productMsg}}" wx:key="item">
+    <view class="school-list">
+      <navigator url="{{item.link}}" hover-class="navigator-hover">
+        <view class="school-list-info" index="{{index}}">
+          <image class="school-list-photo" src="{{item.img}}"/>
+          <text class="school-list-desc1">{{item.content}}</text>
+        </view>
+      </navigator>
+    </view>
+  </block>
+</view>

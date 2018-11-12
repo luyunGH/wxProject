@@ -1,0 +1,12 @@
+<!--views.wxml-->
+<view>
+    <view>view组件</view>
+    <view class="view-parent-container" hover-class="hover-parent-container">
+        <view class="view-container"
+            hover-class="hover-container"
+            hover-stop-propagation="true"
+            hover-start-time="1000"
+            hover-stay-time="3000">
+        </view>
+    </view>
+</view>

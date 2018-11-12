@@ -1,0 +1,31 @@
+<audio 
+    poster="{{poster}}" 
+    name="{{name}}" 
+    author="{{author}}" 
+    src="{{src}}" 
+    id="myAudio" 
+    controls
+    loop>
+</audio>
+<button type="primary" bindtap="audioPlay">播放</button>
+<button type="primary" bindtap="audioPause">暂停</button>
+<button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
+<button type="primary" bindtap="audioStart">回到开头</button>
+<camera device-position="back" flash="off" style="width:100%; height:300px;"></camera>
+<button type="primary" bindtap="takePhoto">拍照</button>
+<view>预览</view>
+<image mode="widthFix" src="{{src}}"></image>
+
+<view class="page-body">
+  <view class="page-section tc">
+    <live-pusher id="pusher" url="https://domain/push_stream" mode="RTC" beauty="1000" autopush bindstatechange="statechange" />
+
+    <view class="btn-area">
+      <button bindtap="bindStart" class="page-body-button" type="primary">播放推流</button>
+      <button bindtap="bindPause" class="page-body-button" type="primary">暂停推流</button>
+      <button bindtap="bindStop" class="page-body-button" type="primary">停止推流</button>
+      <button bindtap="bindResume" class="page-body-button" type="primary">恢复推流</button>
+      <button bindtap="bindSwitchCamera" class="page-body-button" type="primary">切换前后摄像头</button>
+    </view>
+  </view>
+</view>

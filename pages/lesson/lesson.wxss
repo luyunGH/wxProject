@@ -1,0 +1,27 @@
+page{
+    background-color: #f4f4f4;
+  }
+  .container2{
+      padding: 30rpx;
+  }
+  .item{
+      display: flex;
+      flex-direction: row;
+      /* justify-content:space-between; */
+      align-items: center;
+      height:90rpx;
+      width:100%;
+      line-height: 80rpx;
+      background: #fff;
+      font-size:25rpx;
+      border-radius:20rpx;
+      margin-bottom:20rpx;
+  }
+  .itemText1{
+      width:20%;
+      height:90rpx;
+      border-radius:20rpx 0 0 20rpx;
+      background:#90daff;
+      text-align: center;
+      margin-right:20rpx;
+  }

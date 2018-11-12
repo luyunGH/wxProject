@@ -1,0 +1,28 @@
+<view class="container2">
+    <button type="primary" bindtap="show">弹框</button>
+</view>
+<!-- 官方 -->
+<!-- <modal 
+    hidden="{{hidden}}" 
+    title="正确答案"
+    bindconfirm="confirm"
+    no-cancel="{{true}}"
+    confirm-text="OK"
+    bindconfirm="bindconfirm"
+    bindcancel="bindcancel" class="modaltextstyle">
+    {{modaltext}}
+</modal> -->
+<!-- 自定义 灵活性高 -->
+<view class="modal-mask" 
+    bindtap="hideModal" 
+    catchtouchmove="preventTouchMove" 
+    wx:if="{{showModal}}"></view>
+    <icon type="cancel" class="cancel" bindtap="onCancel" size="40" color="#fff" wx:if="{{showModal}}"/>
+<!-- <view class="cancel" bindtap="onCancel" wx:if="{{showModal}}">X</view> -->
+<view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">正确答案</view>
+    <view class="modal-content">{{modaltext}}</view>
+    <view class="modal-footer">
+        <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">OK</view>
+    </view>
+</view>

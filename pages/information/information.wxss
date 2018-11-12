@@ -1,0 +1,99 @@
+/* pages/information/information.wxss */
+page{
+  background-color: #f4f4f4;
+}
+.infor{
+  width:80%;
+  background-color:#ffffff;
+  margin:50rpx auto;
+   align-items: center;
+  border-radius: 20rpx;
+  padding:40rpx;
+  height: 800rpx;
+
+} 
+.infor .section{
+    height:120rpx;
+    /* margin-bottom:50rpx; */
+    line-height: 120rpx;
+    border-bottom:1px solid #d5d5d5;
+
+}
+.infor .section .left{
+      width:60%;
+      float:left;
+      color:#999999;
+
+}
+.infor .section .right{
+  width:40%;
+  float:right;
+}
+.infor .section .right input{
+  text-align:right;
+  height:120rpx;
+  line-height:120rpx;
+}
+.infor .section .right .btn{
+  width:70%;
+  height:80%;
+  background-color:#95a5fc;
+  color: #fefffd;
+  border-radius:50rpx;
+  margin-top: 20rpx;
+}
+.tijiao{
+  color: #fefffd;
+  margin-top:150rpx;
+  width:30%;
+  padding:5rpx;
+  background-color:#24bfff;
+ border-radius: 50rpx;
+}
+
+
+/* add */
+/* .section-item {
+  background-color: white;
+  overflow: hidden;
+  border-bottom: 1rpx solid lightgray;
+} */
+
+.section-tips {
+  float: left;
+  width: 140rpx;
+  height: 120rpx;
+  color:#999999;
+  line-height:120rpx; 
+  font-size: 14px;
+}
+.section-input1 {
+  float: left;
+  width: 280rpx;
+  height: 120rpx;
+}
+
+.section-input1 input {
+  width: 100%;
+  height: 100%;
+  line-height:100%;
+  font-size: 13px;
+}
+.section-code {
+  float: left;
+  width: 180rpx;
+  height: 120rpx;
+  background-color:white;
+  text-align: center;
+}
+
+.section-code:after{
+  border: none;
+}
+
+.section-code text{
+  font-size: 12px;
+  line-height:  120rpx;
+  color: #e05b56;
+  border-bottom: 1rpx solid #e05b56;
+}

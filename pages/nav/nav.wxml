@@ -1,0 +1,14 @@
+<view class="btn-area">
+  <navigator url="/pages/swiper/swiper?title=swiper" hover-class="navigator-hover">
+    <button type="default">跳转到新页面</button>
+  </navigator>
+  <navigator url="/pages/logs/logs?title=logs" open-type="redirect" hover-stop-propagation="{{true}}" hover-class="other-navigator-hover">
+    <button type="default">在当前页打开</button>
+  </navigator>
+  <navigator url="/pages/index/index" open-type="switchTab" hover-class="other-navigator-hover">
+    <button type="default">切换Tab</button>
+  </navigator>
+  <navigator url="/pages/nav/nav" open-type="reLaunch">
+    <button type="default">重新加载页面</button>
+  </navigator>
+</view>

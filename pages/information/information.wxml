@@ -1,0 +1,66 @@
+<!-- <text style='background-color:#f4f4f4'>个人资料</text> -->
+<view  class='infor' style='font-size:30rpx;'  wx:for="{{informationList}}" wx:for-item="item">
+
+<view class="section">
+  <view class="left">姓名</view> 
+  <view class="right">
+    <input type="text" value="{{item.name}}" auto-focus/>
+  </view>
+</view>
+
+<view class="section">
+<view class="left">学校名字</view> 
+<view class="right">
+  <input value=" {{item.school_name}}" auto-focus/>
+</view>
+</view>
+
+
+<!-- {{item.school_name}} -->
+<view class="section">
+<view class="left">年级</view> 
+<view class="right">
+  <input value="{{item.grade_name}}" auto-focus/>
+</view>
+</view>
+
+
+
+<view class="section">
+<view class="left">性别</view> 
+<view class="right">
+  <input  value="{{item.sex}}" auto-focus/>
+</view>
+</view>
+
+
+<view class="section">
+<view class="left">手机号码</view> 
+<view class="right">
+  <input value="{{item.tel}}" bindinput="usernameInput" auto-focus/>
+</view>
+</view>
+
+
+<view class="section">
+  <view class="section-tips">
+    <label>验证码</label>
+  </view> 
+  <view class="section-input1">
+    <input placeholder="请输入验证码" bindinput="authcodeInput" password="true"></input>
+  </view>
+  <button class="section-code" 
+    disabled="{{isClick}}"  
+    bindtap="gainAuthCodeAction">
+    <text>{{time}}</text>
+  </button>
+</view>
+
+
+</view>
+
+
+
+<view>
+<button class="tijiao">OK</button>
+</view>

@@ -1,0 +1,145 @@
+/* pages/section/section.wxss */
+page{
+  background-color: #f4f4f4;
+}
+.vw{
+  margin:30rpx;
+}
+
+.vw .top{
+
+  margin-bottom:34rpx;
+  margin-top: 4rpx;
+}
+.vw .top .one{
+  color:#333333;
+  font-size: 28rpx;
+  margin-right:40rpx;
+}
+.vw .top .two{
+    font-size: 28rpx;
+  color:#999999;
+}
+.vw .content{
+  width:100%;
+  height:900rpx;
+  background-color:#ffffff;
+   align-items: center;
+   border-radius:30rpx;
+   padding-top:20rpx;
+}
+.vw .content .ti{
+  margin:30rpx 50rpx;
+}
+.vw .content .ti .page{
+  background-color:#759ef5;
+  color:#ffffff;
+  padding:10rpx 30rpx 10rpx 30rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+.vw .content .ti .text{
+  margin-top:20rpx;
+}
+.vw .content .ti .text .one{
+  font-size:28rpx;
+  color: #333333;
+}
+/* 尾部开始 */
+.content .bottom{
+  display:flex;
+   margin-top:500rpx;
+   height:50rpx;
+}
+.content .bottom .btn{
+background-color:#f4f4f4;
+color:#26befd;
+text-align: center;
+border-radius:50rpx;
+padding-left:30rpx;
+padding-right:30rpx;
+font-size: 35rpx;
+box-shadow: 0px 3px 0px #d1d1d1;
+height:90rpx;
+width:30%;
+  
+}
+
+
+.content .bottom .btn::after{
+  border: none;
+  
+}
+/* 尾部结束 */
+.modal-mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+    z-index: 9000;
+    color: #fff;
+  }
+  .modal-dialog {
+    width: 540rpx;
+    padding: 0 30rpx;
+    overflow: hidden;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    z-index: 9999;
+    background: #f9f9f9;
+    /* margin: -180rpx 80rpx; */
+    border-radius: 36rpx;
+     margin-left:-300rpx;
+  }
+  
+  .modal-title {
+    padding: 40rpx 0;
+    font-size: 36rpx;
+    color: #95a7fb;
+    text-align: center;
+    border-bottom:1px solid #8f9299;
+  }
+  
+  .modal-content {
+    padding: 50rpx 32rpx;
+    text-align: center;
+    font-size:30rpx;
+  }
+  .modal-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    padding-bottom: 30rpx;
+    height: 60rpx;
+    font-size: 34rpx;
+    line-height: 60rpx;
+  }
+  .btn-confirm { 
+    width: 150rpx;
+    color: #fff;
+    text-align: center;
+    background: #95a5fc;
+    border-radius: 20rpx;
+  }
+.cancel{
+    width:50rpx;
+    height:50rpx;
+    border:1px solid #fff;
+    text-align: center;
+    line-height: 60rpx;
+    border-radius:50%;
+    position: fixed;
+    top: 28%;
+    left: 0;
+    color:#fff;
+    background: #000;
+    opacity: 0.5;
+    margin: 0 380rpx;
+    z-index: 99999;
+}

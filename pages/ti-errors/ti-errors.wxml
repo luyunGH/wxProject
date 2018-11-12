@@ -1,0 +1,70 @@
+<!--pages/section/section.wxml-->
+<view class="vw">
+
+<!-- 顶部开始 -->
+<view class='top'>
+<text class="one">2018\10</text>
+<text class="two">Mary</text>
+</view>
+<!-- 顶部结束 -->
+
+
+
+<!-- 中间内容开始 -->
+<view class='content'>
+<!-- 头部开始 -->
+<view class="ti">
+<text class="page">12\1</text>
+<view class="text">
+<text class="one">已知17个连续整数的和是306，那么，紧接在这17个数后面的那17个整数的和为____.</text>
+</view>
+</view>
+<!-- 头部结束 -->
+
+
+
+<!-- 尾部开始 -->
+
+
+<view class='bottom' style='overflow:visible;'>
+
+<button class="btn" bindtap='show'>自解答案</button>
+<button class="btn" bindtap='show'>正确答案</button>
+<button class="btn" bindtap='teacher'>咨询教师</button>
+</view>
+
+<!-- 尾部结束 -->
+
+
+
+</view>
+
+<!-- 中间内容结束 -->
+</view>
+
+
+
+
+<view class="modal-mask" 
+    bindtap="hideModal" 
+    catchtouchmove="preventTouchMove" 
+    wx:if="{{showModal}}"></view>
+<!-- <view class="cancel" bindtap="onCancel" wx:if="{{showModal}}">X</view> -->
+<!-- width:50rpx;
+height:50rpx;
+z-index:999999;
+position:fixed;
+top:24%;
+left:50%;
+margin-left:-25rpx; -->
+
+<image wx:if="{{showModal}}" src='../../Img/other/delete.png' bindtap="onCancel" style='width:50rpx;height:50rpx;position:absolute;top:20%;left:50%;z-index:9999;'></image>
+
+
+<view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">正确答案</view>
+    <view class="modal-content">{{modaltext}}</view>
+    <view class="modal-footer">
+        <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">OK</view>
+    </view>
+</view>

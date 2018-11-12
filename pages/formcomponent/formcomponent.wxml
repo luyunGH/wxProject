@@ -1,0 +1,269 @@
+<!-- button -->
+<button 
+    type="default" 
+    size="{{defaultSize}}" 
+    loading="{{loading}}" 
+    plain="{{plain}}"
+    disabled="{{disabled}}" 
+    bindtap="default" 
+    hover-class="other-button-hover"> 
+    default
+</button>
+<button 
+    type="primary" 
+    size="{{primarySize}}" 
+    loading="{{loading}}" 
+    plain="{{plain}}"
+	disabled="{{disabled}}" 
+    bindtap="primary"> 
+    primary 
+</button>
+<button 
+    type="warn" 
+    size="{{warnSize}}" 
+    loading="{{loading}}" 
+    plain="{{plain}}"
+	disabled="{{disabled}}" 
+    bindtap="warn"> 
+    warn 
+</button>
+<button bindtap="setDisabled">点击设置以上按钮disabled属性</button>
+<button bindtap="setPlain">点击设置以上按钮plain属性</button>
+<button bindtap="setLoading">点击设置以上按钮loading属性</button>
+<button open-type="contact">进入客服会话</button>
+<button open-type="share">触发转发</button>
+<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
+<button open-type="getPhoneNumber">获取用户手机号</button>
+<button open-type="openSetting">打开授权设置页</button>
+<button open-type="feedback">意见反馈</button>
+<checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{items}}">
+        <checkbox 
+          value="{{item.name}}" 
+          checked="{{item.checked}}" 
+          disabled="{{disabled}}" 
+          color="blue">{{item.value}}
+        </checkbox>
+    </label>
+</checkbox-group>
+<!-- form -->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section section_gap">
+    <view class="section__title">switch</view>
+    <switch name="switch"/>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">slider</view>
+    <slider name="slider" show-value ></slider>
+  </view>
+
+  <view class="section">
+    <view class="section__title">input</view>
+    <input name="input" placeholder="please input here" />
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">radio</view>
+    <radio-group name="radio-group">
+      <label><radio value="radio1"/>radio1</label>
+      <label><radio value="radio2"/>radio2</label>
+    </radio-group>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">checkbox</view>
+    <checkbox-group name="checkbox">
+      <label><checkbox value="checkbox1"/>checkbox1</label>
+      <label><checkbox value="checkbox2"/>checkbox2</label>
+    </checkbox-group>
+  </view>
+  <view class="btn-area">
+    <button type="primary" formType="submit">Submit</button>
+    <button formType="reset">Reset</button>
+  </view>
+</form>
+<!-- input -->
+<view class="page-body">
+  <view class="page-section">
+    <view class="weui-cells__title">可以自动聚焦的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" placeholder="将会获取焦点"/>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">控制最大输入长度的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" maxlength="10" placeholder="最大输入长度为10" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">实时获取输入值：{{inputValue}}</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input"  maxlength="10" bindinput="bindKeyInput" placeholder="输入同步到view中"/>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">控制输入的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input"  bindinput="bindReplaceInput" placeholder="连续的两个1会变成2" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">控制键盘的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input"  bindinput="bindHideKeyboard" placeholder="输入123自动收起键盘" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">数字输入的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="number" placeholder="这是一个数字输入框" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">密码输入的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" password type="text" placeholder="这是一个密码输入框" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">带小数点的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="digit" placeholder="带小数点的数字键盘"/>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">身份证输入的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="idcard" placeholder-class="input-placeholder" placeholder="身份证输入键盘" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">控制占位符颜色的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" placeholder-style="color:#F76260" placeholder="占位符字体是红色的" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">value属性</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="text" value="value属性 : " disabled="{{disabled}}"/>
+      </view>
+    </view>
+  </view>
+  <view class="picker-title">picker从底部弹起的滚动选择器(五种)</view>
+
+  <view class="section">
+    <view class="section_title">1、普通选择器</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        当前选择：{{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section_title">2、多列选择器</view>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class="picker">
+        当前选择：{{multiArray[0][multiIndex[0]]}},{{multiArray[1][multiIndex[1]]}},{{multiArray[2][multiIndex[2]]}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section_title">3、时间选择器</view>
+    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+      <view class="picker">
+        当前选择：{{time}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section_title">4、日期选择器</view>
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2018-09-01" bindchange="bindDateChange">
+      <view class="picker">
+        当前选择: {{date}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section_title">5、省市区选择器</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view>嵌入页面的滚动选择器：{{year}}年{{month}}月{{day}}日</view>
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+  <view class="section">
+    <view>单项选择器radio</view>
+    <radio-group class="radio-froup" bindchange="radioChange">
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}" disabled="{{true}}" color="red"/>{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="section">
+    <view>滑动选择器slider</view>
+    <view class="section section_gap">
+      <text class="section__title">设置step</text>
+      <view class="body-view">
+        <slider bindchange="slider2change" value="0" min="50" max="200" show-value/>
+      </view>
+    </view>
+  </view>
+  <view class="section">
+    <view>开关选择器switch</view>
+    <view class="body-view">
+      <switch checked="{{true}}" disabled="{{true}}" color="#ff0000"/>
+      <switch/>
+    </view>
+  </view>
+  <view class="section">
+    <view>多行输入框textarea</view>
+    <textarea bindblur="bindTextAreaBlur" value="" auto-height placeholder="自动变高" />
+  </view>
+  <view class="section">
+    <textarea placeholder="这个只有在按钮点击的时候才聚焦" />
+    <view class="btn-area">
+      <button bindtap="bindButtonTap">使得输入框获取焦点</button>
+    </view>
+  </view>
+  <view class="section">
+    <form bindsubmit="bindFormSubmit">
+      <textarea placeholder="form 中的 textarea" name="textarea"/>
+      <button form-type="submit"> 提交 </button>
+    </form>
+  </view>
+</view>
